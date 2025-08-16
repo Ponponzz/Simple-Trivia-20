@@ -112,6 +112,8 @@
             // Hide next button
             document.getElementById('nextBtn').classList.remove('show');
             selectedAnswer = null;
+            nextBtn.disabled = true;  // prevent clicks
+            selectedAnswer = null;
         }
 
         function selectAnswer(answerIndex) {
@@ -143,6 +145,7 @@
             setTimeout(() => {
                 document.getElementById('nextBtn').classList.add('show');
             }, 1000);
+            nextBtn.disabled = false;
         }
 
         function nextQuestion() {
